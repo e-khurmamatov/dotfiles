@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+# source custom executable functions
+for function in $ZDOTDIR/functions/*.zsh(N); do
+  source $function
+done
+unset function
+
+# source in order: pre, configs, post (if they exist)
+for config in $ZDOTDIR/conf.d/*.zsh(N); do
+  source $config
+done
+unset config
