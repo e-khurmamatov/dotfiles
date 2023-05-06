@@ -1,0 +1,30 @@
+[user]
+	name = Eldar Khurmamatov
+	email = 74624554+e-khurmamatov@users.noreply.github.com
+	signingkey = 2E971092B67F9348
+[core]
+	excludesfile = /Users/eldar/.config/git/ignore
+	editor = code --wait
+[commit]
+	gpgsign = true
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = auto
+	pager = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
