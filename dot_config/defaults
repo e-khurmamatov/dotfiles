@@ -1,0 +1,19 @@
+#
+# Dock
+#
+
+# Autohides the Dock
+defaults write com.apple.dock "autohide" -bool "true" && killall Dock
+
+# Change the Dock opening delay
+defaults write com.apple.dock autohide-delay -float 0; killall Dock
+
+#
+# System dialogs
+#
+
+# expand save dialog
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# expand print dialog
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
