@@ -20,7 +20,6 @@ All software configured to use [XDG Base Directory Specification 🗂️][xdg-sp
 - [ ] Add run_once_ script for automatic setup on new machine.
 - [ ] Add macOS defaults configuration.
 
-
 [brew]: https://brew.sh/
 [fish-shell]: https://fishshell.com/
 [starship]: https://starship.rs/
