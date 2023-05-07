@@ -2,9 +2,6 @@
 
 # set programm-specific dirs to XDG
 
-# gnupg
-set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
-
 # less
 set -gx LESSKEY "$XDG_CONFIG_HOME/less/lesskey"
 set -gx LESSHISTFILE "$XDG_CACHE_HOME/less/history"

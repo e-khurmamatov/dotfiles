@@ -14,9 +14,6 @@ export ZDOTDIR=${ZDOTDIR:-$XDG_CONFIG_HOME/zsh}
 # Set english locale
 export LANG=en_US.UTF-8
 
-# gpg
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"
-
 # less
 # macOS uses outdated less without XDG dirs support
 export LESSKEY="${LESSKEY:-$XDG_CONFIG_HOME/less/lesskey}"
