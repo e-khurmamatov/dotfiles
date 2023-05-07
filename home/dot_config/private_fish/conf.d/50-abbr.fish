@@ -1,7 +1,5 @@
 #!/usr/bin/env fish
 
-# abbr for fish
-
 # expands .. to cd ../, ... to cd ../../ and so on.
 abbr --add dotdot --regex '^\.\.+$' --function multicd
 
@@ -9,8 +7,12 @@ abbr --add dotdot --regex '^\.\.+$' --function multicd
 abbr -a !! --position anywhere --function last_history_item
 
 # chezmoi
-abbr -a cz chezmoi
+if command -q chezmoi
+    abbr -a cz chezmoi
+end
 
-# conda
-abbr -a conda micromamba
-abbr -a mamba micromamba
+# micromamba
+if command -q conda
+    abbr -a conda micromamba
+    abbr -a mamba micromamba
+end
