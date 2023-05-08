@@ -1,21 +1,32 @@
 # ⚙️ Eldar's dotfiles
 
-> Managed by [chezmoi 🤖](https://www.chezmoi.io/)
+> Managed by [chezmoi 🏠](https://www.chezmoi.io/)
 
-The repository is work in progress. Stay tuned for details.
+The repository is work in progress.
 
 ## 🔎 About configuration
+
+The setup scripts are aimed for MacOS. Other versions will be supported in the future.
 
 - 💻 macOS
 - [🍺 brew (package manager)][brew]
 - [🐟 fish (shell)][fish-shell]
 - [🚀 Starship (prompt)][starship]
 
-All software configured to use [XDG Base Directory Specification 🗂️][xdg-spec].
+All software configured to use [XDG Base Directory Specification 🗂️][xdg-spec] to keep `$HOME` clean.
+
+## 📥 Installation
+
+My dotfiles can be installed on a new machine with a single command. To install, run the following command in your terminal (macOS and Linux):
+
+```sh
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply e-khurmamatov --verbose
+```
+
+`--verbose` flag is optional. It will print out the output of each command.
 
 ## 📌 TODO
 
-- [ ] Add instructions for install.
 - [ ] Add Brewfile (see [brew bundle][brew-bundle]).
 - [ ] Add run_once_ script for automatic setup on new machine.
 - [ ] Add macOS defaults configuration.
