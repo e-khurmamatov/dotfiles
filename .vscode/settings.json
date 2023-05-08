@@ -1,0 +1,12 @@
+{
+    "conventionalCommits.scopes": [
+        "README",
+        "Scripts",
+        "git",
+        "ssh",
+        "vscode",
+        "zsh",
+        "fish",
+    ],
+    "editor.formatOnSave": false,
+}
