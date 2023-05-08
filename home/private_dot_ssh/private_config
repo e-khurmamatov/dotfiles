@@ -1,0 +1,13 @@
+# See https://www.ssh.com/ssh/config for more information.
+
+# Add all keys to ssh-agent and use keychain for passphrase storage
+Host *
+  IgnoreUnknown UseKeychain,AddKeysToAgent
+  AddKeysToAgent yes
+  UseKeychain yes
+
+Host github.com
+  User git
+  Hostname github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519_github
