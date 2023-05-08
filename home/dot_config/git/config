@@ -1,7 +1,7 @@
 [user]
 	name = Eldar Khurmamatov
 	email = 74624554+e-khurmamatov@users.noreply.github.com
-	signingKey = "key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAMPJgCMMYKD53fhd62rvUHzC7UhZCgCuc+yT0RUpyxb 74624554+e-khurmamatov@users.noreply.github.com"
+	signingKey = ~/.ssh/id_ed25519_github.pub
 [gpg]
 	format = ssh
 [gpg "ssh"]
