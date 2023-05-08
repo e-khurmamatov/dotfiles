@@ -2,3 +2,7 @@
 .zshrc
 .zsh_sessions
 .zsh_history
+# git
+.gitconfig
+.gitignore
+.ipython
