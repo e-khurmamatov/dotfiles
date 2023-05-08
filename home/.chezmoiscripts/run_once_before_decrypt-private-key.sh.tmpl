@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -uo pipefail
+
+ERR-handle() {
+    local status=$?
+    echo >&2 Error in ${BASH_SOURCE[0]} on line ${BASH_LINENO[0]}: \"$BASH_COMMAND\"
+    echo >&2 Failed with error code ${status}
+    exit ${status}
+}
+
+trap ERR-handle ERR
+
+verbose_echo() {
+    if [[ "${CHEZMOI_VERBOSE:-}" == 1 ]]; then
+        echo "$@"
+    fi
+}
+
+if [ ! -f "${HOME}/.config/chezmoi/key.txt" ]; then
+    verbose_echo "Decrypting Age key..."
+    age --decrypt --output "${HOME}/.config/chezmoi/key.txt" "{{ .chezmoi.sourceDir }}/key.txt.age"
+    chmod 600 "${HOME}/.config/chezmoi/key.txt"
+    verbose_echo "Decrypted Age key"
+else
+    verbose_echo "Age key already exists. Skipping decryption."
+fi
