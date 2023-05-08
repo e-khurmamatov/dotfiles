@@ -1,0 +1,4 @@
+# remove default zsh configuration
+.zshrc
+.zsh_sessions
+.zsh_history
