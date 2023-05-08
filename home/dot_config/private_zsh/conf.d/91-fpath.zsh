@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # add completions from brew
 if type brew &>/dev/null; then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"

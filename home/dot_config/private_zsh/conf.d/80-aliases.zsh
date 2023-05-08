@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # navigation
 alias ..='cd ..'
 alias ...='cd ../..'

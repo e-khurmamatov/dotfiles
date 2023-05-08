@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # makes color constants available
 autoload -U colors
 colors

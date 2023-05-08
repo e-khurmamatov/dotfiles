@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 # if /opt/homebrew/opt/micromamba/bin/micromamba exists, use it
 if [ -f "/opt/homebrew/opt/micromamba/bin/micromamba" ]; then

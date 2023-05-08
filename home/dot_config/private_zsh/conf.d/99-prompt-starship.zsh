@@ -1,4 +1,4 @@
-# prompt configuration
+#!/usr/bin/env zsh
 
 if type starship &>/dev/null; then
     eval "$(starship init zsh)"

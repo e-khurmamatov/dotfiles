@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 setopt HIST_IGNORE_SPACE      # ignore lines which start with space.
 setopt HIST_REDUCE_BLANKS     # trim extra blanks from history lines.
 setopt HIST_EXPIRE_DUPS_FIRST # expire a duplicate event first when trimming history.
