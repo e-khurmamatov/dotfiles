@@ -1,0 +1,90 @@
+{{ if (eq .chezmoi.os "darwin") -}}
+#!/usr/bin/env bash
+
+# This script is run once before running `chezmoi apply` on macOS.
+
+#
+# Set up error handling and verbose mode
+#
+set -uo pipefail
+
+function ERR-handle() {
+    local status=$?
+    echo >&2 Error in ${BASH_SOURCE[0]} on line ${BASH_LINENO[0]}: \"$BASH_COMMAND\"
+    echo >&2 Failed with error code ${status}
+    exit ${status}
+}
+
+trap ERR-handle ERR
+
+function VERBOSE-handle() {
+    if [[ "${CHEZMOI_VERBOSE:-}" == 1 ]]; then
+        echo "$@"
+    fi
+}
+
+{{ if eq .chezmoi.arch "arm64" }}
+#
+# Install Rosetta 2 on Apple Silicon
+#
+if ! [[ -f /Library/Apple/usr/share/rosetta/rosetta ]]; then
+    VERBOSE-handle "Installing Rosetta 2"
+    softwareupdate --install-rosetta --agree-to-license
+else
+    VERBOSE-handle "Rosetta 2 already installed. Skipping installation."
+fi
+{{ end -}}
+
+
+#
+# Install Xcode command line tools
+#
+if ! [[ -f /Library/Developer/CommandLineTools/usr/bin/git ]]; then
+    VERBOSE-handle "Installing command line tools"
+    xcode-select --install
+else
+    VERBOSE-handle "Command line tools already installed. Skipping installation."
+fi
+
+#
+# Install Homebrew
+#
+if [[ $(command -v brew) == "" ]]; then
+    VERBOSE-handle "Installing Homebrew"
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    if [[ "$(uname -m)" == arm64 ]]; then
+        eval $(/opt/homebrew/bin/brew shellenv)
+    else
+        eval $(/usr/local/bin/brew shellenv)
+    fi
+
+    chmod -R go-w "$(brew --prefix)/share"
+
+    brew analytics off
+
+    VERBOSE-handle "Updating Homebrew"
+    brew update
+
+
+else
+    VERBOSE-handle "Homebrew already installed. Skipping installation."
+fi
+
+# TODO brew bundle install packages
+
+#
+# brew bundle
+#
+# VERBOSE-handle "Installing Homebrew packages"
+# brew bundle --file={{ joinPath .chezmoi.sourceDir "../Brewfile" | quote }} --no-lock
+
+# TODO Configure fish as default shell
+#
+# fish shell
+#
+
+# TODO config sudo-touchid
+# sudo brew services start sudo-touchid
+
+{{ end -}}

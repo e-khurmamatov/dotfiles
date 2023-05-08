@@ -28,7 +28,6 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply e-khurmamatov --verbose
 ## 📌 TODO
 
 - [ ] Add Brewfile (see [brew bundle][brew-bundle]).
-- [ ] Add run_once_ script for automatic setup on new machine.
 - [ ] Add macOS defaults configuration.
 
 [brew]: https://brew.sh/
