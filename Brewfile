@@ -11,6 +11,7 @@
 # Taps
 # ------------------------------------------------------------------------------
 tap "homebrew/cask-fonts"
+tap "homebrew/services"
 tap "microsoft/git"                 # for git-credential-manager
 tap "artginzburg/tap"               # for sudo-touch-id
 
@@ -19,16 +20,13 @@ tap "artginzburg/tap"               # for sudo-touch-id
 # CLI Tools
 # ------------------------------------------------------------------------------
 
-# version control
-brew "git"
-
-# encryption
-brew "age"                          # modern encryption
+brew "git"                          # version control
+brew "age"                          # encryption
 
 brew "mas" if OS.mac?
-brew "node"
 
 # TODO check how it works when chezmoi is installed with one-liner on a new machine
+
 brew "chezmoi"                      # dotfiles manager
 brew "starship"                     # prompt
 
@@ -37,48 +35,60 @@ brew "zsh-autocomplete"
 brew "zsh-autosuggestions"
 brew "zsh-fast-syntax-highlighting"
 
-# fish
+# User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 
-# python
+# Fast Cross-Platform Package Manager
 brew "micromamba"
 
 # misc
-brew "xdg-ninja", args: ["HEAD"]
-brew "artginzburg/tap/sudo-touchid" if OS.mac?      # use Touch ID for sudo
-brew "smartmontools" if OS.mac?                     # disk inspection for macOS
+brew "xdg-ninja", args: ["HEAD"]                    # Check $HOME for unwanted files and directories
+brew "artginzburg/tap/sudo-touchid" if OS.mac?      # Permanent TouchID support for sudo
+brew "smartmontools" if OS.mac?                     # SMART hard drive monitoring
+brew "node"
 
 
 # ------------------------------------------------------------------------------
 # Cask
 # ------------------------------------------------------------------------------
-cask "notion"
-cask "google-drive"
-cask "blobsaver"
 
 # browsers
 cask "google-chrome"
 cask "firefox"
-
 # messaging
-cask "zoom"
 cask "telegram"
 cask "discord"
+# tools
+cask "rectangle"
+cask "adguard"
+cask "keka"
+cask "maccy"
+cask "iina"
+cask "transmission"
+cask "appcleaner"
+cask "stats"
+cask "unnaturalscrollwheels"
+cask "google-drive"
+cask "notion"
+
+# dev
+cask "git-credential-manager-core"
+cask "visual-studio-code"
 
 # games
 cask "steam"
 cask "sony-ps-remote-play"
 
-# working with archives
-cask "keka"
+# office
+cask "microsoft-word"
+cask "microsoft-excel"
+cask "microsoft-powerpoint"
 
-# science
-cask "zotero"
+# work communication
+cask "zoom"
 
 # data analysis
 cask "tableau-public"
-cask "visual-studio-code"
-cask "git-credential-manager-core"
 
 # quick look plugins
 cask "ipynb-quicklook"
@@ -86,16 +96,8 @@ cask "jpc-qlcolorcode"
 cask "qlstephen"
 
 # misc
-cask "adguard"
-cask "appcleaner"
-cask "stats"
-cask "rectangle"
-cask "transmission"
+cask "blobsaver"
 cask "handbrake"
-cask "iina"
-cask "maccy"
-cask "unnaturalscrollwheels"
-
 
 # ------------------------------------------------------------------------------
 # Fonts
@@ -111,5 +113,5 @@ cask "font-sf-mono"
 # ------------------------------------------------------------------------------
 mas "Bitwarden", id: 1352778147
 mas "Multi Cropper", id: 1610330550
-mas "WhatsApp", id: 1147396723
 mas "Silicon Info", id: 1542271266
+mas "WhatsApp", id: 1147396723
