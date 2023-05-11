@@ -1,6 +1,6 @@
 # ⚙️ Eldar's dotfiles
 
-> Managed by [chezmoi 🏠](https://www.chezmoi.io/)
+> Managed by [chezmoi 🏠][chezmoi]
 
 The repository is work in progress.
 
@@ -36,6 +36,8 @@ Anyone is free to copy, modify, publish, use, or distribute this software in sou
 
 See [LICENSE](LICENSE) for details.
 
+<!-- External links -->
+[chezmoi]: https://www.chezmoi.io/
 [brew]: https://brew.sh/
 [fish-shell]: https://fishshell.com/
 [starship]: https://starship.rs/
