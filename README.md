@@ -31,11 +31,11 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply e-khurmamatov --verbose
 - [ ] Add macOS defaults configuration.
 
 <!--
-## ©️ Licence
+## ©️ License
 
 Anyone is free to copy, modify, publish, use, or distribute this software in source code form for any non-commercial purpose and by any means.
 
-See [LICENCE](/LICENCE) for details.
+See [LICENSE](LICENSE) for details.
 -->
 
 [brew]: https://brew.sh/
