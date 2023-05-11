@@ -30,6 +30,14 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply e-khurmamatov --verbose
 - [ ] Add Brewfile (see [brew bundle][brew-bundle]).
 - [ ] Add macOS defaults configuration.
 
+<!--
+## ©️ Licence
+
+Anyone is free to copy, modify, publish, use, or distribute this software in source code form for any non-commercial purpose and by any means.
+
+See [LICENCE](/LICENCE) for details.
+-->
+
 [brew]: https://brew.sh/
 [fish-shell]: https://fishshell.com/
 [starship]: https://starship.rs/
