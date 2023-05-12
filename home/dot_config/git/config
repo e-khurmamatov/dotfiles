@@ -2,6 +2,7 @@
 	name = Eldar Khurmamatov
 	email = 74624554+e-khurmamatov@users.noreply.github.com
 	signingKey = ~/.ssh/id_ed25519_github.pub
+# Use SSH signing for commits and tags
 [gpg]
 	format = ssh
 [gpg "ssh"]
@@ -10,13 +11,16 @@
 	gpgsign = true
 [tag]
 	gpgsign = true
-# Enforce SSH
+# Enforce SSH for GitHub, GitLab, Bitbucket
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 [url "ssh://git@gitlab.com/"]
 	insteadOf = https://gitlab.com/
 [url "ssh://git@bitbucket.org/"]
 	insteadOf = https://bitbucket.org/
+[color]
+	ui = true
+# Use VS Code for all operations
 [core]
 	editor = code --wait
 [diff]
@@ -27,13 +31,13 @@
 	tool = code
 [mergetool "code"]
 	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
-[color]
-	ui = true
+# Use Git LFS
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+# Use Git Credential Manager Core
 [credential]
 	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
