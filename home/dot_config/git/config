@@ -18,6 +18,8 @@
 	insteadOf = https://gitlab.com/
 [url "ssh://git@bitbucket.org/"]
 	insteadOf = https://bitbucket.org/
+[init]
+	defaultBranch = main
 [color]
 	ui = true
 # Use VS Code for all operations
@@ -39,7 +41,7 @@
 	required = true
 # Use Git Credential Manager Core
 [credential]
-	helper = 
+	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
