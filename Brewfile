@@ -4,8 +4,6 @@
 # [1] https://github.com/Homebrew/homebrew-bundle
 # [2] https://docs.brew.sh/Manpage#bundle-subcommand
 #
-# TODO Add template for Brewfile and prompt for software install
-# TODO Add macOS / Linux check and install only relevant software
 
 # ------------------------------------------------------------------------------
 # Taps
@@ -24,8 +22,6 @@ brew "git"                          # version control
 brew "age"                          # encryption
 
 brew "mas" if OS.mac?
-
-# TODO check how it works when chezmoi is installed with one-liner on a new machine
 
 brew "chezmoi"                      # dotfiles manager
 brew "starship"                     # prompt
