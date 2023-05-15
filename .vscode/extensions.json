@@ -3,6 +3,8 @@
         "vivaxy.vscode-conventional-commits",
         "bmalehorn.vscode-fish",
         "foxundermoon.shell-format",
-        "gruntfuggly.todo-tree"
+        "gruntfuggly.todo-tree",
+        "davidanson.vscode-markdownlint",
+        "github.vscode-pull-request-github"
     ]
 }
