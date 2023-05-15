@@ -25,11 +25,6 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply e-khurmamatov --verbose
 
 `--verbose` flag is optional. It will print out the output of each command.
 
-## 📌 TODO
-
-- [ ] Add Brewfile (see [brew bundle][brew-bundle]).
-- [ ] Add macOS defaults configuration.
-
 ## ©️ License
 
 Anyone is free to copy, modify, publish, use, or distribute this software in source code form for any non-commercial purpose and by any means.
@@ -42,4 +37,3 @@ See [LICENSE](LICENSE) for details.
 [fish-shell]: https://fishshell.com/
 [starship]: https://starship.rs/
 [xdg-spec]: https://wiki.archlinux.org/title/XDG_Base_Directory
-[brew-bundle]: https://github.com/Homebrew/homebrew-bundle
