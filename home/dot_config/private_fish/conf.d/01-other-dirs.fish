@@ -19,3 +19,7 @@ set -gx NODENV_ROOT "$XDG_DATA_HOME/nodenv"
 
 # android-studio
 set -gx ANDROID_HOME "$XDG_DATA_HOME/android"
+
+# AWS
+set -gx AWS_SHARED_CREDENTIALS_FILE "$XDG_CONFIG_HOME/aws/credentials"
+set -gx AWS_CONFIG_FILE "$XDG_CONFIG_HOME/aws/config"
