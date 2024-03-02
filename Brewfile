@@ -42,6 +42,7 @@ brew "xdg-ninja", args: ["HEAD"]                    # Check $HOME for unwanted f
 brew "artginzburg/tap/sudo-touchid" if OS.mac?      # Permanent TouchID support for sudo
 brew "smartmontools" if OS.mac?                     # SMART hard drive monitoring
 brew "node"
+brew "openjdk@17"
 
 
 # ------------------------------------------------------------------------------
@@ -58,13 +59,10 @@ cask "discord"
 cask "rectangle"
 cask "adguard"
 cask "keka"
-cask "maccy"
 cask "iina"
 cask "transmission"
-cask "appcleaner"
 cask "stats"
 cask "unnaturalscrollwheels"
-cask "google-drive"
 cask "notion"
 
 # dev
@@ -83,9 +81,6 @@ cask "microsoft-powerpoint"
 # work communication
 cask "zoom"
 
-# data analysis
-cask "tableau-public"
-
 # quick look plugins
 cask "ipynb-quicklook"
 cask "jpc-qlcolorcode"
@@ -93,14 +88,12 @@ cask "qlstephen"
 
 # misc
 cask "blobsaver"
-cask "handbrake"
 
 # ------------------------------------------------------------------------------
 # Fonts
 # ------------------------------------------------------------------------------
 cask "font-golos-text"
 cask "font-jetbrains-mono"
-cask "font-jetbrains-mono-nerd-font"
 cask "font-sf-mono"
 
 
@@ -111,3 +104,5 @@ mas "Bitwarden", id: 1352778147
 mas "Multi Cropper", id: 1610330550
 mas "Silicon Info", id: 1542271266
 mas "WhatsApp", id: 1147396723
+mas "Lightweight PDF", id: 1450640351
+mas "uBlacklist for Safari", id: 1547912640
